@@ -1,7 +1,7 @@
 
 function cargarTextos() {
     var textos = [
-        "de Andrés Bestard Maggio. <br><br> Presiona < o > para pasar de pagina",
+        "por Andrés Bestard Maggio. <br><br> Presiona < o > para pasar de pagina",
         "",
         '"Aqui estoy siguiendo las huellas de Aquellos que se fueron...<br>' + 'Estoy caminando por la senda que dejaron Aquellos que se fueron...<br>' + 'Sigo el rastro de sus pisadas...<br>' + 'Aquellos que se fueron me han hablado desde lejos...<br>' + 'Ellos desde el infinito me han hablado...<br>' + 'Las huellas de aquellos que se fueron Estan aqui."<br>' + '-Canto shamanico selknam (ona)<br>',
         '"Andar andando"',
