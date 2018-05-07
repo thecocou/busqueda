@@ -1,0 +1,159 @@
+html{
+    height: 100%;
+    margin: auto;
+    width: 80%;
+}
+
+body {
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+#Container {
+    height: inherit;
+    display: grid;
+    grid-template: 15% 0 auto 10% 10% / repeat(20, 1fr);
+    align-content: center;
+    justify-content: stretch;
+}
+
+#Titulos {
+    grid-column: 4 / 18;
+    grid-row: 1 / 2;
+}
+
+#logo {
+    width: 40%;
+    overflow: visible;
+    display: block;
+    margin: auto;
+    padding: 1rem;
+}
+
+.Boton {
+    background: white;
+    color: #777;
+    font-size: 2em;
+    border: none;
+    outline: none !important;
+    grid-row: 3 / 4;
+
+    box-shadow: 1px 1px 100px -30px rgba(0, 0, 0, 0.0);
+    transition: all 0.4s ease-in-out;
+}
+
+.Boton:hover {
+    box-shadow: 1px 1px 100px -30px rgba(0, 0, 0, 0.67);
+    cursor: pointer;
+    font-size: 2.5em;
+    transform: matrix(1, -0.01, 0, 1, 0, -0.1);
+}
+
+.Boton:active {
+    box-shadow: 1px 1px 150px -10px rgba(0, 0, 0, 0.67);
+    cursor: pointer;
+}
+
+#previous {
+    grid-column: 3 / 5;
+}
+
+#next {
+    grid-column: 17 / 19;
+}
+
+#Contenido {
+    grid-column: 5 / 17;
+    grid-row: 3 / 4;
+    background: white;
+    z-index: 1;
+/*    animation: slide 1s forwards;*/
+}
+/*
+@keyframes slide {
+    0% {
+        left: -500px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+*/
+#textos {
+    grid-column: 5 / 17;
+    grid-row: 4 / 5;
+    border: 0;
+    text-align: center;
+}
+
+.textosAnimados {
+    animation: opacity 1.5s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+p {
+    font-family: "open-sans",
+    "Helvetica Neue",
+    "Helvetica",
+    Helvetica,
+    Arial,
+    sans-serif;
+    color: #777;
+    padding: 1rem;
+}
+
+#animatedLine {
+    grid-column: 5 / 17;
+    grid-row: 3 / 4;
+    z-index: 2;
+    overflow: hidden;
+}
+
+svg path {
+    stroke: white;
+    stroke-width: 933;
+}
+
+/* Animaciones */
+
+.lineaAnimada {
+    display: block;
+    stroke-dasharray: 2020 2020;
+    animation: offset 1s linear forwards;
+}
+
+@keyframes offset {
+    0% {
+        stroke-dashoffset: 2020;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -2020;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 1600px) {
+    html {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #logo {
+        width: 60%;
+    }
+}
