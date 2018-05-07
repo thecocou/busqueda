@@ -109,7 +109,7 @@ function cargarTextos() {
         '"Somos cómo un árbol plantado en América"',
         '"Con raices muy profundas"',
         "",
-        '"El blanco tiene solo sus ramas sobre America" "Apartadas de su propio esencia"',
+        '"El blanco tiene solo sus ramas sobre America" "Apartadas de su propia esencia"',
         '"La tarea es encontrar el tronco que nos une" Melesio Zatora Wichi',
         '"Por un objetivo en común"',
         '"Nuevo Proyecto" (Una nueva planta)',

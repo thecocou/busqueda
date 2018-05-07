@@ -116,13 +116,19 @@ svg path {
 
 /* Animaciones */
 
-.lineaAnimada {
+.animacion-next {
     display: block;
     stroke-dasharray: 2020 2020;
-    animation: offset 1s linear forwards;
+    animation: siguiente 1s linear forwards;
 }
 
-@keyframes offset {
+.animacion-previous {
+    display: block;
+    stroke-dasharray: 2020 2020;
+    animation: anterior 1s linear forwards;
+}
+
+@keyframes siguiente {
     0% {
         stroke-dashoffset: 2020;
     }
@@ -131,6 +137,18 @@ svg path {
     }
     100% {
         stroke-dashoffset: -2020;
+    }
+}
+
+@keyframes anterior {
+    0% {
+        stroke-dashoffset: -2020;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 2020;
     }
 }
 

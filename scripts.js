@@ -12,7 +12,7 @@ function initBusqueda() {
         Busqueda.button[n].onclick = function () {
             // cambiar pagina y mostrar nueva
             Busqueda.changePage(this.id)
-                .showPageAnimation()
+                .showPageAnimation(this.id)
                 .showImage()
                 .showText();
         };
@@ -64,9 +64,9 @@ class Book {
     }
 
     // metodo para mostrar animacion de pagina
-    showPageAnimation() {
+    showPageAnimation(direction) {
         let self = this;
-        self.animacion.innerHTML = '<svg id="animacion" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1134 734.2"><path id="linea" class="lineaAnimada" d="M1303.8 367.1S957 484.6 584.4 373s-777.8-5.9-777.8-5.9" fill="none" stroke="#fff" stroke-width="856" stroke-miterlimit="10" /></svg >';
+        self.animacion.innerHTML = '<svg id="animacion" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1134 734.2"><path id="linea" class="animacion-'+direction+'" d="M1303.8 367.1S957 484.6 584.4 373s-777.8-5.9-777.8-5.9" fill="none" stroke="#fff" stroke-width="856" stroke-miterlimit="10" /></svg >';
         return this;
     }
 }
