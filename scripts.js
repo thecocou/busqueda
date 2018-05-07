@@ -58,7 +58,7 @@ class Book {
         let self = this;
         setTimeout(function () {
             // actualizo la pagina que se muestra
-            self.screen.innerHTML = "<img src='img/" + self.page + ".jpg' width='100%'>";
+            self.screen.innerHTML = "<img src='img/" + self.page + ".JPG' width='100%'>";
         }, 500);
         return this;
     }
