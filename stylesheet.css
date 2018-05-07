@@ -14,7 +14,7 @@ body {
 #Container {
     height: inherit;
     display: grid;
-    grid-template: 15% 0 auto 10% 10% / repeat(20, 1fr);
+    grid-template: 15% 0 auto 0 15% / repeat(20, 1fr);
     align-content: center;
     justify-content: stretch;
 }
@@ -48,11 +48,11 @@ body {
     box-shadow: 1px 1px 100px -30px rgba(0, 0, 0, 0.67);
     cursor: pointer;
     font-size: 2.5em;
-    transform: matrix(1, -0.01, 0, 1, 0, -0.1);
+    /*transform: matrix(1, -0.01, 0, 1, 0, -0.1);*/
 }
 
 .Boton:active {
-    box-shadow: 1px 1px 150px -10px rgba(0, 0, 0, 0.67);
+    box-shadow: 1px 1px 150px -10px rgba(153, 10, 10, 0.67);
     cursor: pointer;
 }
 
@@ -69,18 +69,8 @@ body {
     grid-row: 3 / 4;
     background: white;
     z-index: 1;
-/*    animation: slide 1s forwards;*/
 }
-/*
-@keyframes slide {
-    0% {
-        left: -500px;
-    }
-    100% {
-        left: 0px;
-    }
-}
-*/
+
 #textos {
     grid-column: 5 / 17;
     grid-row: 4 / 5;
@@ -89,7 +79,7 @@ body {
 }
 
 .textosAnimados {
-    animation: opacity 1.5s;
+    animation: opacity 2s;
 }
 
 @keyframes opacity {
@@ -100,7 +90,6 @@ body {
         opacity: 1;
     }
 }
-
 
 p {
     font-family: "open-sans",
