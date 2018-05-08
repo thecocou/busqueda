@@ -59,7 +59,7 @@ class Book {
         setTimeout(function () {
             // actualizo la pagina que se muestra
             self.screen.innerHTML = "<img src='img/" + self.page + ".JPG' width='100%'>";
-        }, 500);
+        }, 400);
         return this;
     }
 

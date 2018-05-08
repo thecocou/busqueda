@@ -118,13 +118,13 @@ svg path {
 
 .animacion-next {
     display: block;
-    stroke-dasharray: 2020 2020;
+    stroke-dasharray: 2020;
     animation: siguiente 1s linear forwards;
 }
 
 .animacion-previous {
     display: block;
-    stroke-dasharray: 2020 2020;
+    stroke-dasharray: 2020;
     animation: anterior 1s linear forwards;
 }
 
