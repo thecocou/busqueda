@@ -6,7 +6,8 @@ function initBusqueda() {
     Busqueda = new Book()
     // mostrar la pagina
         .showImage()
-        .showText();
+        .showText()
+        .cacheNextPicture();
     // chequear si se hizo click en los botones
     for (let n = 0; n < 2; n++) {
         Busqueda.button[n].onclick = function () {
@@ -14,7 +15,8 @@ function initBusqueda() {
             Busqueda.changePage(this.id)
                 .showPageAnimation(this.id)
                 .showImage()
-                .showText();
+                .showText()
+                .cacheNextPicture();
         };
     }
 }
@@ -29,6 +31,7 @@ class Book {
         this.screen = document.getElementById('Contenido');
         this.text = document.getElementById('textos');
         this.animacion = document.getElementById('animatedLine');
+        this.cache = document.getElementById('cache');
         this.textos = cargarTextos();
     }
 
@@ -49,15 +52,16 @@ class Book {
     // metodo para mostrar texto
     showText() {
         let self = this;
+        // actualizo el texto que se muestra
         self.text.innerHTML = "<p class='textosAnimados' >" + self.textos[self.page-2] + "</p>";
         return this;
     }
 
-    // metodo para mostrar pagina
+    // metodo para mostrar imagen
     showImage() {
         let self = this;
         setTimeout(function () {
-            // actualizo la pagina que se muestra
+            // actualizo la imagen que se muestra
             self.screen.innerHTML = "<img src='img/" + self.page + ".JPG' width='100%'>";
         }, 400);
         return this;
@@ -66,7 +70,16 @@ class Book {
     // metodo para mostrar animacion de pagina
     showPageAnimation(direction) {
         let self = this;
+        // cargo la animacion
         self.animacion.innerHTML = '<svg id="animacion" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1134 734.2"><path id="linea" class="animacion-'+direction+'" d="M1303.8 367.1S957 484.6 584.4 373s-777.8-5.9-777.8-5.9" fill="none" stroke="#fff" stroke-width="856" stroke-miterlimit="10" /></svg >';
+        return this;
+    }
+
+    // guardar proxima pagina en cache
+    cacheNextPicture() {
+        let self = this;
+        // cargo proxima imagen
+        self.cache.innerHTML = "<img src='img/" + (self.page +  1) + ".JPG'>";
         return this;
     }
 }
