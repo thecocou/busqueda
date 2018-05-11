@@ -5,6 +5,7 @@ function initBusqueda() {
     // Cargar los datos
     Busqueda = new Book()
     // mostrar la pagina
+        .showPageAnimation('next')
         .showImage()
         .showText()
         .cacheNextPicture();
@@ -71,7 +72,7 @@ class Book {
     showPageAnimation(direction) {
         let self = this;
         // cargo la animacion
-        self.animacion.innerHTML = '<svg id="animacion" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1134 734.2"><path id="linea" class="animacion-'+direction+'" d="M1303.8 367.1S957 484.6 584.4 373s-777.8-5.9-777.8-5.9" fill="none" stroke="#fff" stroke-width="856" stroke-miterlimit="10" /></svg >';
+        self.animacion.innerHTML = '<svg id="animacion" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1134 740"><path id="linea" class="animacion-'+direction+'" d="M1303.8 367.1S957 484.6 584.4 373s-777.8-5.9-777.8-5.9" fill="none" /></svg >';
         return this;
     }
 
@@ -79,7 +80,9 @@ class Book {
     cacheNextPicture() {
         let self = this;
         // cargo proxima imagen
-        self.cache.innerHTML = "<img src='img/" + (self.page +  1) + ".JPG'>";
+        if (self.page < self.lastPage) {
+            self.cache.innerHTML = "<img src='img/" + (self.page +  1) + ".JPG'>";
+        }
         return this;
     }
 }

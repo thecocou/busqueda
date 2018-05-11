@@ -30,6 +30,7 @@ body {
     display: block;
     margin: auto;
     padding: 1rem;
+    animation: opacity 2s;
 }
 
 .Boton {
@@ -41,14 +42,15 @@ body {
     grid-row: 3 / 4;
 
     box-shadow: 1px 1px 100px -30px rgba(0, 0, 0, 0.0);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    animation: opacity 2s;
 }
 
 .Boton:hover {
     box-shadow: 1px 1px 100px -30px rgba(0, 0, 0, 0.67);
     cursor: pointer;
     font-size: 2.5em;
-    /*transform: matrix(1, -0.01, 0, 1, 0, -0.1);*/
+    /*transform: matrix(1, -0.1, 0, 1, 0, -0.1);*/
 }
 
 .Boton:active {
@@ -76,6 +78,8 @@ body {
     grid-row: 4 / 5;
     border: 0;
     text-align: center;
+    padding: 1rem;
+    animation: opacity 2s;
 }
 
 .textosAnimados {
@@ -106,12 +110,11 @@ p {
     grid-column: 5 / 17;
     grid-row: 3 / 4;
     z-index: 2;
-    overflow: hidden;
 }
 
 svg path {
     stroke: white;
-    stroke-width: 933;
+    stroke-width: 940px;
 }
 
 #cache {
@@ -121,13 +124,11 @@ svg path {
 /* Animaciones */
 
 .animacion-next {
-    display: block;
     stroke-dasharray: 2020;
     animation: siguiente 1s linear forwards;
 }
 
 .animacion-previous {
-    display: block;
     stroke-dasharray: 2020;
     animation: anterior 1s linear forwards;
 }
