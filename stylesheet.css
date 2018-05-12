@@ -29,7 +29,7 @@ body {
     overflow: visible;
     display: block;
     margin: auto;
-    padding: 1rem;
+    padding: 0.5rem;
     animation: opacity 2s;
 }
 
@@ -103,7 +103,7 @@ p {
     Arial,
     sans-serif;
     color: #777;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 #animatedLine {
