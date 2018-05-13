@@ -63,7 +63,7 @@ class Book {
         let self = this;
         setTimeout(function () {
             // actualizo la imagen que se muestra
-            self.screen.innerHTML = "<img src='img/" + self.page + ".JPG' width='100%'>";
+            self.screen.innerHTML = "<img src='img/" + self.page + ".JPG' width='100%' alt='" + self.textos[self.page - 2] + "'>";
         }, 400);
         return this;
     }

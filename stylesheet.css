@@ -84,6 +84,7 @@ body {
 
 .textosAnimados {
     animation: opacity 2s;
+    color: #777;
 }
 
 @keyframes opacity {
@@ -104,6 +105,7 @@ p {
     sans-serif;
     color: #777;
     padding: 0.5rem;
+    font-size: 1em;
 }
 
 #animatedLine {
